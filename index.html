@@ -11,24 +11,25 @@
     <link href="./css/base.css" rel="stylesheet" type="text/css">
     <!--3. 메인콘텐츠 서식-->
     <link href="./css/mobile.css" rel="stylesheet" type="text/css">
+    <!-- 4. pc화면서식 -->
+    <link href="./css/pc.css" rel="stylesheet" type="text/css"> 
 
     <!--아이콘-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        <!-- 플렉스 슬라이드 서식 -->
-          <link href="./css/flexslider.css" rel="stylesheet" type="text/css">
+    <!-- 플렉스 슬라이드 서식 -->
+    <link href="./css/flexslider.css" rel="stylesheet" type="text/css">
 
-      <!-- 벤더프리픽스 -->
-        <script src="./script/prefixfree.min.js"></script>
+    <!-- 벤더프리픽스 -->
+    <script src="./script/prefixfree.min.js"></script>
 
-      <!--제이쿼리 소스-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!--제이쿼리 소스-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-     <!--플렉스 슬라이드 제이쿼리 소스 -->
-        <script src="./script/jquery.flexslider.js"></script>
+    <!--플렉스 슬라이드 제이쿼리 소스 -->
+    <script src="./script/jquery.flexslider.js"></script>
 </head>
 <body>
-
     <input type="checkbox" id="toggle">
     <!--헤더영역 시작-->
     <header>
@@ -49,7 +50,7 @@
                     <li>
                      <input type="search" id="sh">
                      <label for="sh">
-                        <i class= "fas fa-search"></i>
+                        <i class= "fas fa-search" class="s1"></i>
                      </label>
                     </li>
                 </ul>
@@ -58,8 +59,8 @@
             <!-- 모바일용 햄버거 메뉴와 검색아이콘 -->
             <label for="toggle" class="toggle_btn"><i class="fas fa-bars"></i></label>
 
-            <i class="fas fa-search"></i>
-
+            <i class="fas fa-search s1"></i>
+        </div>
             <!-- 메인메뉴 -->
             <nav class="gnb">
                 <label for="toggle"><i class="fas fa-times"></i></label>
@@ -100,7 +101,6 @@
                 </li>
             </ul>
             </nav>
-        </div>
     </header>
 
     <!--메인콘텐츠 시작-->
@@ -152,7 +152,9 @@
 
             <article class="brand">
                 <h2>브랜드 소개</h2>
-                <a href="a.html" title="브랜드 스토리" class="brand_banner">브랜드스토리</a>
+                <a href="a.html" title="브랜드 스토리" class="brand_banner">
+                    <img src="./images/mbn0202.png" alt="브랜드스토리">
+                </a>
                 <a href="a.html" title="창업상담">
                     <img src="./images/mbn0201.png" alt="창업상담">
                 </a>
@@ -164,22 +166,21 @@
                     <img src="./images/msns.png" alt="드라마협찬">
                 </a>
             </article>
-
-            <article class="notice">
-                <h2>Notice<i class="fas fa-plus"></i></h2>
-                <ul>
-                    <li><a href="notice01.html" title="">[오픈예정점] 디저트카페 수니 서울 강남점 오픈예정입니다. 이벤트예정 </a></li>
-                    <li><a href="notice02.html" title="[프로모션]달롤달롤">[프로모션] '달롤달롤해' 디저트 세트 3종 할인쿠폰증정 이벤트예정</a></li>
-                    <li><a href="notice03.html" title="[프로모션]핫한">[프로모션] 핫한 여름을 나는 달콤한 방법!</a></li>
-                    <li><a href="notice04.html" title="[프로모션] 강남구청역 오픈을 축하">[프로모션] 디저트카페 쑤니 강남구청역 오픈을 축하합니다.</a></li>
-                </ul>
-            </article>
-
             <article class="store">
                 <h2>매장안내</h2>
                 <a href="a.html" title="매장안내">
                     <img src="./images/mbn04.png" alt="매장안내">
                 </a>
+            </article>
+
+            <article class="notice">
+                <h2>Notice<i class="fas fa-plus"></i></h2>
+                <ul>
+                    <li><a href="notice01.html" title="[오픈예정점] 디저트카페 수니 서울 강남점 오픈예정입니다.">[오픈예정점] 디저트카페 수니 서울 강남점 오픈예정입니다. 이벤트예정 </a></li>
+                    <li><a href="notice02.html" title="[프로모션]달롤달롤">[프로모션] '달롤달롤해' 디저트 세트 3종 할인쿠폰증정 이벤트예정</a></li>
+                    <li><a href="notice03.html" title="[프로모션]핫한">[프로모션] 핫한 여름을 나는 달콤한 방법!</a></li>
+                    <li><a href="notice04.html" title="[프로모션] 강남구청역 오픈을 축하">[프로모션] 디저트카페 쑤니 강남구청역 오픈을 축하합니다.</a></li>
+                </ul>
             </article>
 
             <article class="news">
@@ -192,7 +193,6 @@
                 </ul>
             </article>
 
-ㄴ
         </section>
     </main>
 
@@ -227,7 +227,8 @@
     // Can also be used with $(document).ready()
     $(window).load(function() {
       $('.flexslider').flexslider({
-        animation: "fade"
+        animation: "slide" 
+        /*animation: "fade" fade 부드럽게 슬라이드를 넘겨준다. */
       });
     });
     </script>
