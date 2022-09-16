@@ -8,6 +8,7 @@ body{
     sans-serif;
     font-size: 12px;
     color:#333;
+    background-image:url('../images/bg01.jpg');
 }
 
 a{text-decoration: none;
@@ -16,7 +17,12 @@ a{text-decoration: none;
 input[type="checkbox"]{display:none}
 .slide > h2{display:none;}
 
-.slide > h2 .new_item > h2, .brand > h2, .ad >h2, .store{display:none;}
+header, .stroe, footer{background: #fff;}
+
+#sh{text-align:center;}
+
+.slide > h2 ,.new_item > h2, .brand > h2, .ad >.con>h2
+,.con h2{display:none;}
 
 .brand_banner{
     background-image:url("../images/mbn0202.png");
@@ -58,6 +64,7 @@ i.fa-plus{
 }
 
 footer{
+    background:rgba(255,255,255,0.7)
     border-top:1px solid #333333;
 }
 address > .adddress{
